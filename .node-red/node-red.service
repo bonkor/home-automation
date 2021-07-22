@@ -1,0 +1,17 @@
+[Unit]
+Description=Node-Red
+After=syslog.target network.target
+
+
+[Service]
+ExecStart=/usr/local/bin/node-red
+Type=simple
+User=home-automation
+Group=home-automation
+SyslogIdentifier=Node-Red
+StandardOutput=syslog
+Restart=on-failure
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

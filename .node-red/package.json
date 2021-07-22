@@ -1,0 +1,22 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "fs": "0.0.1-security",
+        "mongodb": "^3.1.13",
+        "node-red-contrib-broadlink-control": "^1.0.8",
+        "node-red-contrib-influxdb": "^0.4.0",
+        "node-red-contrib-modbus": "^5.4.0",
+        "node-red-contrib-nighttime": "^1.0.35",
+        "node-red-contrib-openzwave": "^1.6.2",
+        "node-red-contrib-stoptimer": "0.0.7",
+        "node-red-contrib-telegrambot": "^7.2.0",
+        "node-red-contrib-time-range-switch": "^1.0.0",
+        "node-red-cron-scheduler": "file:../modules/node-red-cron-scheduler",
+        "node-red-mqtt-dynamic": "file:../modules/node-red-mqtt-dynamic",
+        "node-red-node-mongodb": "0.0.14"
+    }
+}

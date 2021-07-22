@@ -1,0 +1,65 @@
+@import 'functions.scss';
+@import 'colors.scss';
+
+.icon {
+    fill: $light-gray4;
+    width: calculate-rem(32);
+    height: calculate-rem(32);
+    margin-left: calculate-rem(10);
+}
+
+.icon-tiny {
+    fill: $light-gray4;
+    width: calculate-rem(16);
+    height: calculate-rem(16);
+    margin-left: calculate-rem(10);
+}
+
+.fire1 {
+    animation: fire 1.8s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.fire2 {
+    animation: fire 1.6s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+}
+
+.fire3 {
+    animation: fire 1.7s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+}
+
+.fire4 {
+    animation: fire 1.3s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+}
+
+.fire5 {
+    animation: fire 1.5s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.fire6 {
+    animation: fire 1.2s infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.4s;
+}
+
+@keyframes fire {
+    0% {
+        transform: translateY(0) translateX(3px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateY(100px) translateX(3px);
+        opacity: 0;
+    }
+}
