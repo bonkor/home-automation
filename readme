@@ -1,0 +1,5 @@
+git add FILENAME		# если добавились новые файлы
+mongodump
+influxd backup influxdb.dump
+git commit -m "comment"
+git push			# перенос на github
