@@ -1,4 +1,5 @@
 import React, { Component, MouseEvent } from 'react';
+import cn from 'classnames';
 
 import { observer } from 'mobx-react';
 import Model from '../model/Model';
@@ -8,6 +9,7 @@ import Icon from './Icon';
 import Slider from './Slider';
 
 import styles from './index.scss';
+import { Types } from '../model/types';
 import { ScreenSize } from '~/constants/enums';
 
 type Props = {
@@ -23,20 +25,31 @@ class Big extends Component<Props> {
     };
 
     render() {
-        const { service, edit } = this.props;
+        const { service, model, edit } = this.props;
 
         if (!service) return null;
 
-        const zwaveModel = service.getDataByNodeId;
+        const node = service.getDataByNodeId;
 
-        if (!zwaveModel) return null;
+        if (!node) return null;
+
+        const value = node.values.find(
+            x => x.value_id === `${model.id}-${Types.CurrentTemperature}`
+        );
+        const valueNumber = value.value as number;
+
+        const backgroundClass = cn(styles.background, {
+            [styles.low]: valueNumber <= model.temperatureMin,
+            [styles.height]: valueNumber >= model.temperatureMax,
+        });
 
         return (
             <div className={styles.wrap} onClick={this.preventDefault}>
-                <Icon zwaveModel={zwaveModel} service={service} edit={edit} size={ScreenSize.big} />
+                <div className={backgroundClass} />
+                <Icon zwaveModel={node} service={service} edit={edit} size={ScreenSize.big} />
                 <div className={styles.sliderWrap}>
-                    <Temperature zwaveModel={zwaveModel} size={ScreenSize.big} />
-                    <Slider zwaveModel={zwaveModel} service={service} edit={edit} />
+                    <Temperature zwaveModel={node} size={ScreenSize.big} />
+                    <Slider zwaveModel={node} service={service} edit={edit} />
                 </div>
             </div>
         );

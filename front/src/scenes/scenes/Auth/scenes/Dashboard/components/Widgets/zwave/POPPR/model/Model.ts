@@ -37,9 +37,27 @@ class Model implements INodeModel {
     @observable
     noViewOpenner?: boolean = true;
 
+    @observable
+    @serializable
+    temperatureMin: number = 10;
+
+    @observable
+    @serializable
+    temperatureMax: number = 30;
+
     constructor(id: string, name: string) {
         this.id = id;
         this.name = name;
+    }
+
+    @action.bound
+    changeTemperatureMin(val: number) {
+        this.temperatureMin = val;
+    }
+
+    @action.bound
+    changeTemperatureMax(val: number) {
+        this.temperatureMax = val;
     }
 
     @action.bound

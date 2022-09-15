@@ -13,6 +13,29 @@
     margin-right: calculate-rem(10);
 }
 
+.background {
+    position: absolute;
+    box-sizing: border-box;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    transition: background-color 0.3s linear;
+    background-image: linear-gradient(
+        to top,
+        $dark-gray4 0,
+        rgba($dark-gray4, 0.9) 30%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    z-index: -1;
+}
+
+.low {
+    background-color: $blue4;
+}
+
+.height {
+    background-color: $red4;
+}
+
 .icon {
     width: calculate-rem(65);
     height: calculate-rem(65);
@@ -20,10 +43,6 @@
     transition: fill 0.3s linear;
     fill: $light-gray4;
     margin-right: calculate-rem(26);
-}
-
-.slider {
-    margin-bottom: calculate-rem(10);
 }
 
 .icon-small {

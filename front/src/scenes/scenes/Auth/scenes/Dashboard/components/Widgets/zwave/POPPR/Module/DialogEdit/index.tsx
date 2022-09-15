@@ -6,6 +6,7 @@ import Model from '../../model/Model';
 
 import Service from '../../model/Service';
 import styles from './index.scss';
+import Temperature from './Temperature';
 
 type Props = {
     model: Model;
@@ -25,6 +26,9 @@ class DialogEdit extends Component<Props> {
                         onChange={model.changeName}
                     />
                 </FormGroup>
+                <div className={styles.settingsWrap}>
+                    <Temperature model={model} />
+                </div>
             </div>
         );
     }

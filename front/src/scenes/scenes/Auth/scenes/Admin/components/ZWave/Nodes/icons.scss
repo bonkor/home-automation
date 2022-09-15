@@ -64,3 +64,7 @@
 .i000200038010 {
     @include icon('nodes/thermostat.svg', 44, 44, $light-gray4);
 }
+
+.i014800030001 {
+    @include icon('nodes/radiator.svg', 44, 44, $light-gray4);
+}

@@ -12,6 +12,7 @@ import FGD212 from './zwave/FGD212/model/Widget';
 import PSG01 from './zwave/PSG01/model/Widget';
 import SRT321 from './zwave/SRT321/model/Widget';
 import ZHD01 from './zwave/ZHD01/model/Widget';
+import ESWRT from './zwave/ESWRT/model/Widget';
 import ZTEMP2 from './zwave/ZTEMP2/model/Widget';
 import FIBHC from './zwave/FIBHC/model/Widget';
 import NDS from './zwave/NDS/model/Widget';
@@ -89,6 +90,12 @@ function mapper(node: ZwaveDashboardShortNodeType): INode | null {
         node.productid === '0x8010'
     )
         return new ZHD01(node);
+    if (
+        node.manufacturerid === '0x0148' &&
+        node.producttype === '0x0003' &&
+        node.productid === '0x0001'
+    )
+        return new ESWRT(node);
     if (
         node.manufacturerid === '0x019b' &&
         node.producttype === '0x0004' &&
