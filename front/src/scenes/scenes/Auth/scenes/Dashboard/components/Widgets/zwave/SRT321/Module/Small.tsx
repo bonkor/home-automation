@@ -31,7 +31,7 @@ class Small extends Component<Props> {
         const valueNumber = value.value as number;
 
         const backgroundClass = cn(styles.background, {
-            [styles.low]: valueNumber <= 50,
+            [styles.low]: valueNumber <= model.temperatureMin,
             [styles.height]: valueNumber >= model.temperatureMax,
         });
 

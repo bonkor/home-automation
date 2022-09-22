@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Driver xmlns="https://github.com/OpenZWave/open-zwave" version="5" revision="151" home_id="0xd0e72425" node_id="1" api_capabilities="0" controller_capabilities="40" poll_interval="1800000" poll_interval_between="false">
 	<Node id="1" name="" location="" basic="2" generic="2" specific="1" type="Static PC Controller" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="100000" version="4" configrevision="0" query_stage="Complete">
-		<Neighbors>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Neighbors>254,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
 		<Manufacturer id="115" name="Z-Wave.Me">
 			<Product type="400" id="1" name="ZME_UZB1 USB Stick">
 				<MetaData />
@@ -68,10 +68,9 @@
 				<Compatibility />
 				<State>
 					<CCVersion>1</CCVersion>
-					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="byte" genre="basic" instance="1" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="255">
+				<Value type="byte" genre="basic" instance="1" index="0" label="Basic" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
 					<Help>Basic status of the node</Help>
 				</Value>
 			</CommandClass>
@@ -138,7 +137,7 @@
 					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="6" label="Access Control" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="2" size="3">
+				<Value type="list" genre="user" instance="1" index="6" label="Access Control" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="2" size="0">
 					<Help>Access Control Alerts</Help>
 					<Item label="Clear" value="0" />
 					<Item label="Door/Window Open" value="22" />
@@ -305,7 +304,7 @@
 		</CommandClasses>
 	</Node>
 	<Node id="3" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="100000" version="4" configrevision="14" query_stage="Complete">
-		<Neighbors>1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Neighbors>121,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="203" id="4000" name="FGS223 Double Relay">
 				<MetaData>
@@ -359,10 +358,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True">
+				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="True">
 					<Help>Turn On/Off Device</Help>
 				</Value>
-				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False">
+				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
 			</CommandClass>
@@ -377,10 +376,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
-				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
 				<Value type="button" genre="user" instance="1" index="1" label="Bright" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
@@ -432,7 +431,7 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="decimal" genre="user" instance="1" index="0" label="Electric - kWh" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.01">
+				<Value type="decimal" genre="user" instance="1" index="0" label="Electric - kWh" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.09">
 					<Help></Help>
 				</Value>
 				<Value type="decimal" genre="user" instance="2" index="0" label="Electric - kWh" units="kWh" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="0.00">
@@ -484,7 +483,7 @@
 					<StaticRequests>3</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -493,7 +492,7 @@
 					<Item label="Pressed 2 Times" value="4" />
 					<Item label="Pressed 3 Times" value="5" />
 				</Value>
-				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -885,7 +884,7 @@
 		</CommandClasses>
 	</Node>
 	<Node id="4" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="100000" version="4" configrevision="14" query_stage="Complete">
-		<Neighbors>5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Neighbors>117,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="203" id="4000" name="FGS223 Double Relay">
 				<MetaData>
@@ -939,10 +938,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False">
+				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
-				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True">
+				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
 			</CommandClass>
@@ -957,10 +956,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
-				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
 				<Value type="button" genre="user" instance="1" index="1" label="Bright" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
@@ -1064,7 +1063,7 @@
 					<StaticRequests>3</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -1073,7 +1072,7 @@
 					<Item label="Pressed 2 Times" value="4" />
 					<Item label="Pressed 3 Times" value="5" />
 				</Value>
-				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -1465,7 +1464,7 @@
 		</CommandClasses>
 	</Node>
 	<Node id="5" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="100000" version="4" configrevision="14" query_stage="Complete">
-		<Neighbors>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Neighbors>109,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="203" id="4000" name="FGS223 Double Relay">
 				<MetaData>
@@ -1519,10 +1518,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True">
+				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
-				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False">
+				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
 			</CommandClass>
@@ -1537,10 +1536,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
-				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
 				<Value type="button" genre="user" instance="1" index="1" label="Bright" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
@@ -1644,7 +1643,7 @@
 					<StaticRequests>3</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -1653,7 +1652,7 @@
 					<Item label="Pressed 2 Times" value="4" />
 					<Item label="Pressed 3 Times" value="5" />
 				</Value>
-				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -2045,7 +2044,7 @@
 		</CommandClasses>
 	</Node>
 	<Node id="6" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="100000" version="4" configrevision="14" query_stage="Complete">
-		<Neighbors>29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Neighbors>93,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="203" id="4000" name="FGS223 Double Relay">
 				<MetaData>
@@ -2099,10 +2098,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False">
+				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
-				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="False">
+				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
 			</CommandClass>
@@ -2117,10 +2116,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
-				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
 				<Value type="button" genre="user" instance="1" index="1" label="Bright" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
@@ -2224,7 +2223,7 @@
 					<StaticRequests>3</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -2233,7 +2232,7 @@
 					<Item label="Pressed 2 Times" value="4" />
 					<Item label="Pressed 3 Times" value="5" />
 				</Value>
-				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -2625,7 +2624,7 @@
 		</CommandClasses>
 	</Node>
 	<Node id="7" name="" location="" basic="4" generic="16" specific="1" roletype="5" devicetype="1792" nodetype="0" type="Binary Power Switch" listening="true" frequentListening="false" beaming="true" routing="true" max_baud_rate="100000" version="4" configrevision="14" query_stage="Complete">
-		<Neighbors>61,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Neighbors>61,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
 		<Manufacturer id="10f" name="FIBARO System">
 			<Product type="203" id="4000" name="FGS223 Double Relay">
 				<MetaData>
@@ -2679,10 +2678,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True">
+				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
-				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="True">
+				<Value type="bool" genre="user" instance="2" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
 					<Help>Turn On/Off Device</Help>
 				</Value>
 			</CommandClass>
@@ -2697,10 +2696,10 @@
 				</State>
 				<Instance index="1" endpoint="1" />
 				<Instance index="2" endpoint="2" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
-				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="2" index="0" label="Level" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="255" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
 				<Value type="button" genre="user" instance="1" index="1" label="Bright" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
@@ -2804,7 +2803,7 @@
 					<StaticRequests>3</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -2813,7 +2812,7 @@
 					<Item label="Pressed 2 Times" value="4" />
 					<Item label="Pressed 3 Times" value="5" />
 				</Value>
-				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="6">
+				<Value type="list" genre="user" instance="1" index="2" label="Scene 2" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -3239,10 +3238,9 @@
 				<State>
 					<CCVersion>6</CCVersion>
 					<InNif>true</InNif>
-					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Air Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="25.21">
+				<Value type="decimal" genre="user" instance="1" index="1" label="Air Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="24.92">
 					<Help>Air Temperature Sensor Value</Help>
 				</Value>
 				<Value type="list" genre="system" instance="1" index="256" label="Air Temperature Units" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
@@ -3260,7 +3258,7 @@
 					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="26.5">
+				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="20.0">
 					<Help>Set the Thermostat Setpoint Heating 1</Help>
 				</Value>
 				<Value type="decimal" genre="user" instance="1" index="2" label="Cooling 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="21.0">
@@ -3282,7 +3280,7 @@
 					<StaticRequests>2</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="3">
+				<Value type="list" genre="user" instance="1" index="1" label="Scene 1" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help></Help>
 					<Item label="Inactive" value="0" />
 					<Item label="Pressed 1 Time" value="1" />
@@ -3391,7 +3389,7 @@
 					<StaticRequests>4</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="40">
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
 					<Help>Current Battery Level</Help>
 				</Value>
 			</CommandClass>
@@ -3403,7 +3401,7 @@
 					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="int" genre="system" instance="1" index="0" label="Wake-up Interval" units="Seconds" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="3600">
+				<Value type="int" genre="system" instance="1" index="0" label="Wake-up Interval" units="Seconds" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="300">
 					<Help>How often the Device will Wake up to check for pending commands</Help>
 				</Value>
 				<Value type="int" genre="system" instance="1" index="1" label="Minimum Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="300">
@@ -3442,7 +3440,6 @@
 				<State>
 					<CCVersion>1</CCVersion>
 					<InNif>true</InNif>
-					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
 				<Value type="byte" genre="user" instance="1" index="0" label="Indicator" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
@@ -3461,7 +3458,7 @@
 		</CommandClasses>
 	</Node>
 	<Node id="9" name="" location="" basic="4" generic="8" specific="6" roletype="7" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="true" beaming="true" routing="true" max_baud_rate="100000" version="4" configrevision="5" query_stage="Complete">
-		<Neighbors>124,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Neighbors>124,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
 		<Manufacturer id="148" name="EUROtronic">
 			<Product type="3" id="1" name="EUR_SPIRITZ Wall Radiator Thermostat">
 				<MetaData>
@@ -3490,7 +3487,6 @@
 				</Compatibility>
 				<State>
 					<CCVersion>1</CCVersion>
-					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
 			</CommandClass>
@@ -3499,10 +3495,9 @@
 				<State>
 					<CCVersion>1</CCVersion>
 					<InNif>true</InNif>
-					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="%" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="100" value="254">
+				<Value type="byte" genre="user" instance="1" index="0" label="Level" units="%" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="100" value="0">
 					<Help>The Current Level of the Device</Help>
 				</Value>
 				<Value type="button" genre="user" instance="1" index="1" label="Bright" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
@@ -3523,10 +3518,9 @@
 				<State>
 					<CCVersion>5</CCVersion>
 					<InNif>true</InNif>
-					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Air Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="21.22">
+				<Value type="decimal" genre="user" instance="1" index="1" label="Air Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="22.29">
 					<Help>Air Temperature Sensor Value</Help>
 				</Value>
 				<Value type="list" genre="system" instance="1" index="256" label="Air Temperature Units" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
@@ -3568,7 +3562,7 @@
 					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="8" max="28" value="13.0">
+				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="8" max="28" value="8.5">
 					<Help>Set the Thermostat Setpoint Heating 1</Help>
 				</Value>
 				<Value type="decimal" genre="user" instance="1" index="11" label="Heating Econ" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="8" max="28" value="18.0">
@@ -3665,7 +3659,7 @@
 					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="8" label="Power Management" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="3">
+				<Value type="list" genre="user" instance="1" index="8" label="Power Management" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="0">
 					<Help>Power Management Alerts</Help>
 					<Item label="Clear" value="0" />
 					<Item label="Replace Battery Soon" value="10" />
@@ -3851,10 +3845,9 @@
 				<State>
 					<CCVersion>6</CCVersion>
 					<InNif>true</InNif>
-					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Air Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="26.09">
+				<Value type="decimal" genre="user" instance="1" index="1" label="Air Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="23.80">
 					<Help>Air Temperature Sensor Value</Help>
 				</Value>
 				<Value type="list" genre="system" instance="1" index="256" label="Air Temperature Units" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
@@ -3873,7 +3866,7 @@
 					<StaticRequests>0</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="7.00">
+				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="4.00">
 					<Help>Set the Thermostat Setpoint Heating 1</Help>
 				</Value>
 			</CommandClass>
@@ -3969,7 +3962,7 @@
 					<StaticRequests>4</StaticRequests>
 				</State>
 				<Instance index="1" />
-				<Value type="list" genre="user" instance="1" index="0" label="Day" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
+				<Value type="list" genre="user" instance="1" index="0" label="Day" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="5" size="1">
 					<Help>Day of Week</Help>
 					<Item label="Monday" value="1" />
 					<Item label="Tuesday" value="2" />
@@ -3979,10 +3972,10 @@
 					<Item label="Saturday" value="6" />
 					<Item label="Sunday" value="7" />
 				</Value>
-				<Value type="byte" genre="user" instance="1" index="1" label="Hour" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+				<Value type="byte" genre="user" instance="1" index="1" label="Hour" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="22">
 					<Help>Hour</Help>
 				</Value>
-				<Value type="byte" genre="user" instance="1" index="2" label="Minute" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="3">
+				<Value type="byte" genre="user" instance="1" index="2" label="Minute" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="30">
 					<Help>Minute</Help>
 				</Value>
 			</CommandClass>
@@ -4036,6 +4029,312 @@
 					<StaticRequests>4</StaticRequests>
 				</State>
 				<Instance index="1" />
+			</CommandClass>
+		</CommandClasses>
+	</Node>
+	<Node id="11" name="" location="" basic="1" generic="8" specific="6" roletype="3" devicetype="4608" nodetype="0" type="General Thermostat V2" listening="false" frequentListening="false" beaming="true" routing="false" max_baud_rate="100000" version="4" configrevision="3" query_stage="Complete">
+		<Neighbors>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Neighbors>
+		<Manufacturer id="59" name="Horstmann (Secure Meters)">
+			<Product type="1" id="5" name="SRT-321 Thermostat-HVAC">
+				<MetaData>
+					<MetaDataItem name="OzwInfoPage">http://www.openzwave.com/device-database/0059:0005:0001</MetaDataItem>
+					<MetaDataItem name="ZWProductPage" type="1" id="5">https://products.z-wavealliance.org/products/1563/</MetaDataItem>
+					<MetaDataItem name="ProductPic">images/horstmann/srt321.png</MetaDataItem>
+					<MetaDataItem name="Description">The thermostat includes TPI software that optimises boiler firing to minimise overshooting of temperature in a heated environment. It has been proved that TPI controllers provide considerable energy savings over standard heating controllers. By using interoperable radio solutions the user can remotely change the set point, read the temperature or receive battery reports. It makes this device an ideal partner for use with a home gateway for web enabled apps allowing you to remotely control your heating while on the move. You no longer have to worry about returning to a cold house as long as you have a phone or tablet PC handy. By combining ease of use, ease of installation and intelligent control this thermostat is suitable for use in most heating systems.</MetaDataItem>
+					<MetaDataItem name="ProductManual">https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&amp;filename=Manuals/1563/SRT321 User MAnual.pdf</MetaDataItem>
+					<MetaDataItem name="InclusionDescription">STEP 1: On the SRT321, set DIL switch 1 on the back of the unit to &apos;ON&apos; position, scroll through the function menu by rotating the dial, select &quot;I&quot; and press the dial to activate Inclusion process. Now the character &quot;I&quot; starts flashing. STEP 2: On the 3rd party device, select Inclusion for adding a device into SRT321&apos;s network. After successful inclusion SRT321 displayed &quot;IP&quot; other wise displayed &quot;IF&quot; (Inclusion fail). Note: Once the character starts flashing the installer has 60 seconds to activate the 3rd party device. After successful Inclusion set DIL switch 1 to &apos;OFF&apos; position to operate SRT321 in normal operation. If the inclusion process fails more than once, the 3rd party device may be already included in another network. So first exclude and then include the device.</MetaDataItem>
+					<MetaDataItem name="ExclusionDescription">STEP 1: On the SRT321, Set DIL switch 1 on the back of the unit to &apos;ON&apos; position, scroll through the function menu by rotating the dial, select &quot;E&quot; and press the dial to activate Exclusion process. Now the character &quot;E&quot; starts flashing. STEP 2: On the 3rd party device, select Exclusion for removing device from SRT321&apos;s network. After successful Exclusion SRT321 displayed &quot;EP&quot; other wise displayed &quot;EF&quot; (Exclusion fail). Note: Once the character starts flashing the installer has 60 seconds to activate the 3rd party device. After successful Exclusion set DIL switch 1 to &apos;OFF&apos; position to operate SRT321 in normal operation. If the Exclusion process has failed more than once, try moving the SRT321 to another position and repeat the Exclusion steps.</MetaDataItem>
+					<MetaDataItem name="ResetDescription">Please use this procedure only when the primary controller is missing or otherwise inoperable. To reset the thermostat Set DIL switch 1 on the back of the unit to &apos;ON&apos; position, scroll through the function menu by rotating the dial, select &quot;P&quot; and press the dial twice on the target device to execute reset. Note: After successful operation device displayed &quot;PP&quot;. It will put the device in factory default, that include setting all the configuration, Association to factory default and removing the device from Z-Wave network.</MetaDataItem>
+					<MetaDataItem name="WakeupDescription">SRT321 will wake-up regularly and announce the wakeup state by sending Wakeup Notification to the configured node ID if Wakeup Interval and valid node ID is set. To forcefully wake up the device to send Wakeup notification do the following steps: Set DIL switch 1 on the back of the unit to &apos;ON&apos; position, and than back to the &apos;OFF&apos; position. Note: It is possible to set the node ID to 255 to send wakeup notifications as broadcast. In this mode device takes more time to go to sleep and drains battery faster, but can notify all it&apos;s direct neighbors about a wakeup.</MetaDataItem>
+					<MetaDataItem name="FrequencyName" type="1" id="5">CEPT (Europe)</MetaDataItem>
+					<MetaDataItem name="Name">SRT-321 (Thermostat-HVAC)</MetaDataItem>
+					<MetaDataItem name="Identifier" type="1" id="5">MAX10U-734</MetaDataItem>
+					<ChangeLog>
+						<Entry author="Justin Hammond - Justin@dynam.ac" date="23 May 2019" revision="3">Initial Metadata Import from Z-Wave Alliance Database - https://products.z-wavealliance.org/products/1563/xml</Entry>
+					</ChangeLog>
+				</MetaData>
+			</Product>
+		</Manufacturer>
+		<CommandClasses>
+			<CommandClass id="32" name="COMMAND_CLASS_BASIC">
+				<Compatibility>
+					<Mapping>64</Mapping>
+				</Compatibility>
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+				</State>
+				<Instance index="1" />
+			</CommandClass>
+			<CommandClass id="37" name="COMMAND_CLASS_SWITCH_BINARY">
+				<Compatibility />
+				<State>
+					<AfterMark>true</AfterMark>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="bool" genre="user" instance="1" index="0" label="Switch" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="1" min="0" max="0" value="False">
+					<Help>Turn On/Off Device</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="49" name="COMMAND_CLASS_SENSOR_MULTILEVEL">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+				</State>
+				<Instance index="1" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Air Temperature" units="C" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="23.7">
+					<Help>Air Temperature Sensor Value</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="64" name="COMMAND_CLASS_THERMOSTAT_MODE">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>2</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="list" genre="user" instance="1" index="0" label="Mode" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
+					<Help>Off: No heating, only frost protection. Heat: Room temperature will be kept at the configured setpoint. Heat Eco: Energy save heating mode. Room temperature will be lowered to the configured eco setpoint in order to save energy. Full Power: Full power heating. This mode is left automatically after 5 minutes. Manufacturer Specific: Direct valve control mode. The valve opening percentage can be controlled using the switch multilevel command class.</Help>
+					<Item label="Heat" value="1" />
+				</Value>
+				<SupportedModes>
+					<Mode index="1" label="Heat" />
+				</SupportedModes>
+			</CommandClass>
+			<CommandClass id="66" name="COMMAND_CLASS_THERMOSTAT_OPERATING_STATE">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="string" genre="user" instance="1" index="0" label="Operating State" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="Idle">
+					<Help>Set the Thermostat Operating State</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="67" name="COMMAND_CLASS_THERMOSTAT_SETPOINT">
+				<Compatibility>
+					<Base>0</Base>
+				</Compatibility>
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>0</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="decimal" genre="user" instance="1" index="1" label="Heating 1" units="C" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="24.0">
+					<Help>Set the Thermostat Setpoint Heating 1</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="90" name="COMMAND_CLASS_DEVICE_RESET_LOCALLY">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+			</CommandClass>
+			<CommandClass id="94" name="COMMAND_CLASS_ZWAVEPLUS_INFO">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>6</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="byte" genre="system" instance="1" index="0" label="ZWave+ Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="1">
+					<Help>ZWave+ Version Supported on the Device</Help>
+				</Value>
+				<Value type="short" genre="system" instance="1" index="1" label="InstallerIcon" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-32768" max="32767" value="4608">
+					<Help>Icon File to use for the Installer Application</Help>
+				</Value>
+				<Value type="short" genre="system" instance="1" index="2" label="UserIcon" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-32768" max="32767" value="4608">
+					<Help>Icon File to use for the User Application</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="112" name="COMMAND_CLASS_CONFIGURATION">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="list" genre="config" instance="1" index="1" label="Temperature sensor" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="1" vindex="0" size="1">
+					<Help>Enables Temperature Sensor</Help>
+					<Item label="Disable" value="0" />
+					<Item label="Enable" value="255" />
+				</Value>
+				<Value type="list" genre="config" instance="1" index="2" label="Temperature Scale" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="1" vindex="0" size="1">
+					<Help></Help>
+					<Item label="Celsius" value="0" />
+					<Item label="Fahrenheit" value="255" />
+				</Value>
+				<Value type="byte" genre="config" instance="1" index="3" label="Delta Temperature" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="10">
+					<Help>Delta Temperature in 0.1 degree steps.</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="114" name="COMMAND_CLASS_MANUFACTURER_SPECIFIC">
+				<Compatibility />
+				<State>
+					<CCVersion>2</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>0</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="int" genre="system" instance="1" index="0" label="Loaded Config Revision" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="3">
+					<Help>Revision of the Config file currently loaded</Help>
+				</Value>
+				<Value type="int" genre="system" instance="1" index="1" label="Config File Revision" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="3">
+					<Help>Revision of the Config file on the File System</Help>
+				</Value>
+				<Value type="int" genre="system" instance="1" index="2" label="Latest Available Config File Revision" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="3">
+					<Help>Latest Revision of the Config file available for download</Help>
+				</Value>
+				<Value type="string" genre="system" instance="1" index="4" label="Serial Number" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="00000000">
+					<Help>Device Serial Number</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="115" name="COMMAND_CLASS_POWERLEVEL">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="list" genre="system" instance="1" index="0" label="Powerlevel" units="dB" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
+					<Help>Output RF PowerLevel</Help>
+					<Item label="Normal" value="0" />
+					<Item label="-1dB" value="1" />
+					<Item label="-2dB" value="2" />
+					<Item label="-3dB" value="3" />
+					<Item label="-4dB" value="4" />
+					<Item label="-5dB" value="5" />
+					<Item label="-6dB" value="6" />
+					<Item label="-7dB" value="7" />
+					<Item label="-8dB" value="8" />
+					<Item label="-9dB" value="9" />
+				</Value>
+				<Value type="byte" genre="system" instance="1" index="1" label="Timeout" units="seconds" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+					<Help>Timeout till the PowerLevel is reset to Normal</Help>
+				</Value>
+				<Value type="button" genre="system" instance="1" index="2" label="Set Powerlevel" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
+					<Help>Apply the Output PowerLevel and Timeout Values</Help>
+				</Value>
+				<Value type="byte" genre="system" instance="1" index="3" label="Test Node" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="0">
+					<Help>Node to Perform a test against</Help>
+				</Value>
+				<Value type="list" genre="system" instance="1" index="4" label="Test Powerlevel" units="dB" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
+					<Help>PowerLevel to use for the Test</Help>
+					<Item label="Normal" value="0" />
+					<Item label="-1dB" value="1" />
+					<Item label="-2dB" value="2" />
+					<Item label="-3dB" value="3" />
+					<Item label="-4dB" value="4" />
+					<Item label="-5dB" value="5" />
+					<Item label="-6dB" value="6" />
+					<Item label="-7dB" value="7" />
+					<Item label="-8dB" value="8" />
+					<Item label="-9dB" value="9" />
+				</Value>
+				<Value type="short" genre="system" instance="1" index="5" label="Frame Count" units="" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="-32768" max="32767" value="0">
+					<Help>How Many Messages to send to the Node for the Test</Help>
+				</Value>
+				<Value type="button" genre="system" instance="1" index="6" label="Test" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
+					<Help>Perform a PowerLevel Test against the a Node</Help>
+				</Value>
+				<Value type="button" genre="system" instance="1" index="7" label="Report" units="" read_only="false" write_only="true" verify_changes="false" poll_intensity="0" min="0" max="0">
+					<Help>Get the results of the latest PowerLevel Test against a Node</Help>
+				</Value>
+				<Value type="list" genre="system" instance="1" index="8" label="Test Status" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" vindex="0" size="1">
+					<Help>The Current Status of the last PowerNode Test Executed</Help>
+					<Item label="Failed" value="0" />
+					<Item label="Success" value="1" />
+					<Item label="In Progress" value="2" />
+				</Value>
+				<Value type="short" genre="system" instance="1" index="9" label="Acked Frames" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-32768" max="32767" value="0">
+					<Help>Number of Messages successfully Acked by the Target Node</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="128" name="COMMAND_CLASS_BATTERY">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="byte" genre="user" instance="1" index="0" label="Battery Level" units="%" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="255" value="100">
+					<Help>Current Battery Level</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="132" name="COMMAND_CLASS_WAKE_UP">
+				<Compatibility />
+				<State>
+					<CCVersion>2</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>0</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="int" genre="system" instance="1" index="0" label="Wake-up Interval" units="Seconds" read_only="false" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="86400">
+					<Help>How often the Device will Wake up to check for pending commands</Help>
+				</Value>
+				<Value type="int" genre="system" instance="1" index="1" label="Minimum Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="256">
+					<Help>Minimum Time in seconds the device will wake up</Help>
+				</Value>
+				<Value type="int" genre="system" instance="1" index="2" label="Maximum Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="131071">
+					<Help>Maximum Time in seconds the device will wake up</Help>
+				</Value>
+				<Value type="int" genre="system" instance="1" index="3" label="Default Wake-up Interval" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="86400">
+					<Help>The Default Wake-Up Interval the device will wake up</Help>
+				</Value>
+				<Value type="int" genre="system" instance="1" index="4" label="Wake-up Interval Step" units="Seconds" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="-2147483648" max="2147483647" value="1">
+					<Help>Step Size on Wake-up interval</Help>
+				</Value>
+			</CommandClass>
+			<CommandClass id="133" name="COMMAND_CLASS_ASSOCIATION">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Associations num_groups="6">
+					<Group index="1" max_associations="1" label="Lifeline" auto="true">
+						<Node id="1" />
+					</Group>
+					<Group index="2" max_associations="4" label="Thermostat Mode Set" auto="false" />
+					<Group index="3" max_associations="4" label="Binary Switch Set" auto="false" />
+					<Group index="4" max_associations="4" label="Unsolicited Battery Level Reports" auto="false" />
+					<Group index="5" max_associations="4" label="Thermostat Set Point Reports" auto="false" />
+					<Group index="6" max_associations="4" label="Unsolicited Sensor Multilevel Reports" auto="false" />
+				</Associations>
+			</CommandClass>
+			<CommandClass id="134" name="COMMAND_CLASS_VERSION">
+				<Compatibility />
+				<State>
+					<CCVersion>1</CCVersion>
+					<InNif>true</InNif>
+					<StaticRequests>4</StaticRequests>
+				</State>
+				<Instance index="1" />
+				<Value type="string" genre="system" instance="1" index="0" label="Library Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="2">
+					<Help>Z-Wave Library Version</Help>
+				</Value>
+				<Value type="string" genre="system" instance="1" index="1" label="Protocol Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="4.05">
+					<Help>Z-Wave Protocol Version</Help>
+				</Value>
+				<Value type="string" genre="system" instance="1" index="2" label="Application Version" units="" read_only="true" write_only="false" verify_changes="false" poll_intensity="0" min="0" max="0" value="1.00">
+					<Help>Application Version</Help>
+				</Value>
 			</CommandClass>
 		</CommandClasses>
 	</Node>

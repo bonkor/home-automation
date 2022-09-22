@@ -42,7 +42,7 @@ class Big extends Component<Props> {
         const modeStr = mode.value as string;
 
         const backgroundClass = cn(styles.background, {
-            [styles.low]: valueNumber <= 50,
+            [styles.low]: valueNumber <= model.temperatureMin,
             [styles.height]: valueNumber >= model.temperatureMax,
         });
 
